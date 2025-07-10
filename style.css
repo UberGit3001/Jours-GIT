@@ -1,0 +1,121 @@
+
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        table {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead tr {
+            /* background: linear-gradient(135deg, #c0c0c0, #666666, #c0c0c0);
+            color: #fff; */
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        
+        thead tr:hover {
+            background: radial-gradient(circle, #666666, #c0c0c0, #666666);
+        }
+
+        thead tr>th a {
+            text-decoration: none;
+            color:rgb(0, 128, 255) ;
+        }
+        thead tr>th a:nth-child(2) {
+            color: rgb(0, 255, 0);
+        }
+        
+        th,
+        td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        thead i{
+            color:rgba(0, 128, 255, 0.5);
+        }
+        
+        thead i,
+        tbody i {
+            margin-right: 10px;
+            color: #fff;
+            color:rgba(0, 128, 255, 0.5);
+        }
+        
+        tbody tr:nth-child(odd) {
+    background: linear-gradient(90deg, #ffe29f, #ffa99f);
+}
+        
+        tbody tr:nth-child(even) {
+            /* background-color: rgba(208, 209, 209, 0.4); */
+            background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+        }
+        
+        tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+        
+        td:focus,
+        td:active {
+            color: rgba(0, 255, 0, 0.3);
+            outline: none;
+            /* Retire le contour moche par défaut */
+            /* background-color: #80c0ff; */
+            /* Bleu chrome doux */
+            color: #222;
+            /* Texte sombre toujours lisible */
+            box-shadow: 0 0 8px rgba(0, 128, 255, 0.5);
+            transform: scale(1.02);
+            transition: all 0.2s ease-in-out;
+        }
+        
+        
+        code {
+            background-color: #80c0ff;
+            /* background-color: #e8e8e8; */
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #222;
+            font-family: Consolas, monospace;
+        }
+
+        tfoot {
+            /* background: linear-gradient(to right, #555, #999, #555); */
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    
+  
+
+        tfoot a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        tfoot a:hover {
+            color: #ddd;
+        }
+   
