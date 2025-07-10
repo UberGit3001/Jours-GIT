@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Les Commandes Git Essentielles</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        table {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead tr {
+            /* background: linear-gradient(135deg, #c0c0c0, #666666, #c0c0c0);
+            color: #fff; */
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        
+        thead tr:hover {
+            background: radial-gradient(circle, #666666, #c0c0c0, #666666);
+        }
+
+        thead tr>th a {
+            text-decoration: none;
+            color:rgb(0, 128, 255) ;
+        }
+        thead tr>th a:nth-child(2) {
+            color: rgb(0, 255, 0);
+        }
+        
+        th,
+        td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        thead i{
+            color:rgba(0, 128, 255, 0.5);
+        }
+        
+        thead i,
+        tbody i {
+            margin-right: 10px;
+            color: #fff;
+            color:rgba(0, 128, 255, 0.5);
+        }
+        
+        tbody tr:nth-child(odd) {
+    background: linear-gradient(90deg, #ffe29f, #ffa99f);
+}
+        
+        tbody tr:nth-child(even) {
+            /* background-color: rgba(208, 209, 209, 0.4); */
+            background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+        }
+        
+        tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+        
+        td:focus,
+        td:active {
+            color: rgba(0, 255, 0, 0.3);
+            outline: none;
+            /* Retire le contour moche par défaut */
+            /* background-color: #80c0ff; */
+            /* Bleu chrome doux */
+            color: #222;
+            /* Texte sombre toujours lisible */
+            box-shadow: 0 0 8px rgba(0, 128, 255, 0.5);
+            transform: scale(1.02);
+            transition: all 0.2s ease-in-out;
+        }
+        
+        
+        code {
+            background-color: #80c0ff;
+            /* background-color: #e8e8e8; */
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #222;
+            font-family: Consolas, monospace;
+        }
+
+        tfoot {
+            /* background: linear-gradient(to right, #555, #999, #555); */
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    
+  
+
+        tfoot a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        tfoot a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">
+                    <i class="fas fa-code-branch"></i> <a href="https://www.github.com">UberGit3001™</a> — <a href="#cgu" style="color:white;">Conditions
+                        Générales</a> & <a href="#ptu" style="color:white;">Politique d'Utilisation</a>
+                </th>
+            </tr>
+            <tr>
+                <th><i class="fas fa-terminal"></i> Commande</th>
+                <th><i class="fas fa-lightbulb"></i> Explication Simple</th>
+                <th><i class="fas fa-keyboard"></i> Exemple</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>git clone</code></td>
+                <td><i class="fas fa-download"></i> Télécharge un projet existant sans voler personne (sauf un peu de
+                    talent).</td>
+                <td><code>git clone https://github.com/utilisateur/projet.git</code></td>
+            </tr>
+            <tr>
+                <td><code>git status</code></td>
+                <td><i class="fas fa-eye"></i> Vérifie ce qui a changé. (Parfois ça pique les yeux.)</td>
+                <td><code>git status</code></td>
+            </tr>
+            <tr>
+                <td><code>git add</code></td>
+                <td><i class="fas fa-plus-square"></i> Prépare les fichiers pour le grand saut.</td>
+                <td><code>git add .</code></td>
+            </tr>
+            <tr>
+                <td><code>git commit -m "Message"</code></td>
+                <td><i class="fas fa-save"></i> Enregistre et écris un message qui n’a pas l’air écrit sous la torture.
+                </td>
+                <td><code>git commit -m "Ajout de la page contact"</code></td>
+            </tr>
+            <tr>
+                <td><code>git push</code></td>
+                <td><i class="fas fa-paper-plane"></i> Envoie ton code dans l’espace GitHub. (Pas besoin de fusée.)</td>
+                <td><code>git push origin main</code></td>
+            </tr>
+            <tr>
+                <td><code>git pull</code></td>
+                <td><i class="fas fa-sync"></i> Récupère les idées de génie (ou les catastrophes) des collègues.</td>
+                <td><code>git pull origin main</code></td>
+            </tr>
+            <tr>
+                <td><code>git branch</code></td>
+                <td><i class="fas fa-code-branch"></i> Crée ta branche perso (parce que tout le monde n'a pas besoin de
+                    ton bazar).</td>
+                <td><code>git branch mon-experimentation</code></td>
+            </tr>
+            <tr>
+                <td><code>git checkout</code></td>
+                <td><i class="fas fa-random"></i> Saute d’une branche à l’autre. Attention à l'atterrissage !</td>
+                <td><code>git checkout main</code></td>
+            </tr>
+            <tr>
+                <td><code>git merge</code></td>
+                <td><i class="fas fa-link"></i> Fusionne deux mondes... parfois avec fracas.</td>
+                <td><code>git merge ma-branche</code></td>
+            </tr>
+            <tr>
+                <td><code>git log</code></td>
+                <td><i class="fas fa-history"></i> L’historique de toutes vos erreurs... et peut-être un ou deux
+                    miracles.</td>
+                <td><code>git log</code></td>
+            </tr>
+            <tr>
+                <td><code>git remote -v</code></td>
+                <td><i class="fas fa-satellite-dish"></i> Vérifie l'adresse du dépôt... parce que perdre son code ça
+                    pique !</td>
+                <td><code>git remote -v</code></td>
+            </tr>
+            <tr>
+                <td><code>git reset</code></td>
+                <td><i class="fas fa-undo"></i> Annule un truc... parfois même ta carrière si tu fais pas gaffe.</td>
+                <td><code>git reset HEAD~1</code></td>
+            </tr>
+        </tbody>
+
+        <tfoot id="cgu">
+            <tr>
+                <td colspan="3">
+
+                    <div>
+                        <p>
+                            <strong>
+                                <i class="fas fa-scale-balanced"></i>
+                                &nbsp;&nbsp;Conditions Générales d'Utilisation :
+                            </strong>
+                        </p>
+
+                        <p>En utilisant ce tableau, vous acceptez de ne jamais blâmer l'auteur en cas de crash, bug,
+                            explosion ou licenciement. Toute ressemblance avec un vrai développeur serait purement
+                            fortuite mais pas improbable.
+                        </p>
+
+                        <p>
+                            <strong>
+                                <i class="fas fa-user-secret"></i>
+                                &nbsp;&nbsp;Politique d'Utilisation :
+                            </strong>
+                        </p>
+                        <p>Les utilisateurs promettent de faire semblant de lire les messages d’erreur, d’éviter de tout
+                            casser en production, et de toujours rendre à César ce qui appartient à UberGit3001™.
+                        </p>
+
+                        <p>
+                            🔗 Retrouvez l’auteur sur : <a href="https://github.com/UberGit3001"
+                                target="_blank">github.com/UberGit3001</a><br>
+                            🔗 Ou explorez nos repositories sans connexion : <a href="https://github.com"
+                                target="_blank">github.com</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>
